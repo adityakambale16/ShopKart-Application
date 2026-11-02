@@ -1,19 +1,26 @@
+import { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { ThemeContext } from "./ThemeContext"
 
 const Navbar = () => {
+
+    const {theme, dispatch} = useContext(ThemeContext)
     return (
         <nav className=" navbar bg-dark navbar navbar-expand-sm bg-light fixed-top">
             <h2 className="text-white">Shop<span className="text-danger">Kart</span></h2>
             <div className="input-group w-50 ms-auto">
-                <input type="text" class="form-control" placeholder="Search products..." />
+                <input type="text" className="form-control" placeholder="Search products..." />
                 <button className="btn btn-dark" type="button"> Search</button>
             </div>
             <ul className="nav-list ml-auto">
-                <NavLink to='/'>Home</NavLink>
+                <NavLink to='/home'>Home</NavLink>
                 <NavLink to='/product'>Products</NavLink>
-                <NavLink to='/register'>Register</NavLink>
+                <NavLink to='/contact'>Contact</NavLink>
                 <NavLink to='/cart'>Cart</NavLink>
-                <NavLink to='/login'>Login</NavLink>
+                <NavLink to='/'>Login</NavLink>
+                <button className="btn btn-danger" onClick={() => dispatch({type : 'THEME_TOGGLE'})}>
+                    {theme === 'dark' ? 'light' : 'dark'}
+                </button>
             </ul>
         </nav>
     )
