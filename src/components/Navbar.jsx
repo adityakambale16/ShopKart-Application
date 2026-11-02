@@ -18,8 +18,8 @@ const Navbar = () => {
                 <NavLink to='/contact'>Contact</NavLink>
                 <NavLink to='/cart'>Cart</NavLink>
                 <NavLink to='/'>Login</NavLink>
-                <button onClick={() => dispatch({type : 'THEME_TOGGLE'})}>
-                    {theme === '🌙' ? '🔆' : '🌙'}
+                <button className="btn theme-toggle" onClick={() => dispatch({type : 'THEME_TOGGLE'})}>
+                    {theme === 'dark' ? '☀' : '☾'}
                 </button>
             </ul>
         </nav>

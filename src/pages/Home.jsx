@@ -2,11 +2,6 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Home = () => {
-  const Navigate = useNavigate();
-
-  function formSubmit () {
-    
-  }
   return (
     <main className="home-page">
       <section className="home-hero">
@@ -34,4 +29,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+  export default Home;

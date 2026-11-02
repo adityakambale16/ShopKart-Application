@@ -1244,6 +1244,34 @@ nav.navbar h2 span {
     text-transform: capitalize;
 }
 
+.navbar .nav-list .btn.theme-toggle {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    margin-left: 8px;
+    padding: 0;
+    place-items: center;
+    border: 1px solid rgba(255, 98, 98, 0.45);
+    border-radius: 50%;
+    background: rgba(232, 61, 61, 0.14);
+    color: #ff6262;
+    font-size: 19px;
+    line-height: 1;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar .nav-list .btn.theme-toggle:hover {
+    transform: translateY(-2px);
+    border-color: #ff6262;
+    background: #e83d3d;
+    box-shadow: 0 5px 14px rgba(232, 61, 61, 0.28);
+}
+
+.navbar .nav-list .btn.theme-toggle:focus-visible {
+    outline: 2px solid #ff8a8a;
+    outline-offset: 3px;
+}
+
 .home-page {
     max-width: 1320px;
     margin: 0 auto;
