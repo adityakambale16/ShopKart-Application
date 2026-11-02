@@ -18,8 +18,8 @@ const Navbar = () => {
                 <NavLink to='/contact'>Contact</NavLink>
                 <NavLink to='/cart'>Cart</NavLink>
                 <NavLink to='/'>Login</NavLink>
-                <button className="btn btn-danger" onClick={() => dispatch({type : 'THEME_TOGGLE'})}>
-                    {theme === 'dark' ? 'light' : 'dark'}
+                <button onClick={() => dispatch({type : 'THEME_TOGGLE'})}>
+                    {theme === '🌙' ? '🔆' : '🌙'}
                 </button>
             </ul>
         </nav>
